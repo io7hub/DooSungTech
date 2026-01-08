@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doosung Tech 2030 - Multilingual Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; transition: all 0.5s ease; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.5rem; }
+        .stat-glow { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        .lang-btn { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .lang-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+    </style>
+</head>
+<body class="p-4 md:p-10 min-h-screen flex flex-col items-center">
+
+    <!-- Language Selector -->
+    <div class="fixed top-6 right-6 z-50 flex gap-2 p-1 bg-slate-800/80 backdrop-blur rounded-xl border border-slate-700">
+        <button onclick="updateLang('kr')" id="btn-kr" class="lang-btn px-4 py-2 rounded-lg text-sm font-bold">KR</button>
+        <button onclick="updateLang('es')" id="btn-es" class="lang-btn active px-4 py-2 rounded-lg text-sm font-bold">ES</button>
+        <button onclick="updateLang('en')" id="btn-en" class="lang-btn px-4 py-2 rounded-lg text-sm font-bold">EN</button>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center mb-12 max-w-4xl pt-12 md:pt-0">
+        <div id="badge" class="inline-block px-4 py-1 border border-blue-500 rounded-full text-blue-400 text-sm font-semibold mb-4 tracking-widest uppercase">
+            Visión Global 2030
+        </div>
+        <h1 id="main-title" class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+            Beyond Mobile, <br><span class="gradient-text italic">Into Mobility</span>
+        </h1>
+        <p id="sub-title" class="text-slate-400 text-lg md:text-xl">Doosung Tech: El Futuro de la Movilidad Eléctrica en Monclova, México</p>
+    </header>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
+        
+        <!-- KPI 1 -->
+        <div class="card-glass p-8 flex flex-col items-center text-center group hover:bg-slate-800 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-shipping-fast text-blue-400 text-3xl"></i>
+            </div>
+            <h3 id="label-kpi1" class="text-slate-400 font-semibold mb-2">Logística</h3>
+            <div class="text-4xl font-bold stat-glow mb-1">-35%</div>
+            <p id="desc-kpi1" class="text-sm text-slate-500 leading-relaxed">Reducción en costos de transporte hacia Texas Gigafactory</p>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="card-glass p-8 flex flex-col items-center text-center group hover:bg-slate-800 transition-all duration-300">
+            <div class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-clock text-cyan-400 text-3xl"></i>
+            </div>
+            <h3 id="label-kpi2" class="text-slate-400 font-semibold mb-2">Tiempo de Entrega</h3>
+            <div class="text-4xl font-bold stat-glow mb-1">3 HORAS</div>
+            <p id="desc-kpi2" class="text-sm text-slate-500 leading-relaxed">Distancia estratégica desde la frontera de EE. UU.</p>
+        </div>
+
+        <!-- KPI 3 -->
+        <div class="card-glass p-8 flex flex-col items-center text-center group hover:bg-slate-800 transition-all duration-300">
+            <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-file-invoice-dollar text-emerald-400 text-3xl"></i>
+            </div>
+            <h3 id="label-kpi3" class="text-slate-400 font-semibold mb-2">Beneficio Fiscal</h3>
+            <div class="text-4xl font-bold stat-glow mb-1">0% TAX</div>
+            <p id="desc-kpi3" class="text-sm text-slate-500 leading-relaxed">Cumplimiento total con el acuerdo USMCA</p>
+        </div>
+
+        <!-- KPI 4 -->
+        <div class="card-glass p-8 flex flex-col items-center text-center group hover:bg-slate-800 transition-all duration-300 border-blue-500/30">
+            <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-chart-line text-yellow-400 text-3xl"></i>
+            </div>
+            <h3 id="label-kpi4" class="text-slate-400 font-semibold mb-2">Meta 2030</h3>
+            <div class="text-4xl font-bold stat-glow mb-1">$750M</div>
+            <p id="desc-kpi4" class="text-sm text-slate-500 leading-relaxed">Ventas proyectadas en el mercado de Norteamérica</p>
+        </div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="mt-12 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 card-glass p-8 relative overflow-hidden">
+            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fas fa-network-wired mr-3 text-blue-500"></i> <span id="strategy-title">Sistema Global Triaxial</span>
+            </h3>
+            <div class="flex flex-col md:flex-row justify-around items-center gap-8 py-10">
+                <div class="text-center z-10">
+                    <div class="w-20 h-20 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center mx-auto mb-4 stat-glow">COREA</div>
+                    <p id="tri-1" class="text-sm font-semibold">I+D de Vanguardia</p>
+                </div>
+                <div class="text-center z-10">
+                    <div class="w-20 h-20 rounded-full bg-slate-800 border-2 border-emerald-500 flex items-center justify-center mx-auto mb-4 stat-glow">VIETNAM</div>
+                    <p id="tri-2" class="text-sm font-semibold">Producción en Masa</p>
+                </div>
+                <div class="text-center z-10">
+                    <div class="w-24 h-24 rounded-full bg-blue-600 border-4 border-white/20 flex items-center justify-center mx-auto mb-4 stat-glow">MÉXICO</div>
+                    <p id="tri-3" class="text-sm font-bold text-blue-400">Optimización NA</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-glass p-8 flex flex-col justify-center border-l-4 border-blue-500">
+            <h4 id="roadmap-title" class="text-xl font-bold mb-4">Próximos Pasos</h4>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex-shrink-0 flex items-center justify-center text-[10px] mt-1 mr-3">25</div>
+                    <p id="step-1" class="text-slate-300 text-sm">Finalización de infraestructura en Monclova Hub.</p>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 flex-shrink-0 flex items-center justify-center text-[10px] mt-1 mr-3">26</div>
+                    <p id="step-2" class="text-slate-300 text-sm">Inicio de Producción (SOP) para clientes OEM.</p>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-slate-700 flex-shrink-0 flex items-center justify-center text-[10px] mt-1 mr-3">30</div>
+                    <p id="step-3" class="text-slate-300 text-sm">Dominio del mercado NA con ingresos de $750M.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            kr: {
+                badge: "2030 글로벌 비전",
+                title: "Beyond Mobile, <br><span class='gradient-text italic'>Into Mobility</span>",
+                subtitle: "두성테크: 멕시코 몽클로바 허브, 전기차 모빌리티의 미래",
+                kpi1_label: "물류 혁신", kpi1_desc: "텍사스 기가팩토리향 물류 비용 35% 절감",
+                kpi2_label: "물리적 거리", kpi2_desc: "미국 국경 및 주요 거점으로부터 3시간 거리",
+                kpi3_label: "무관세 혜택", kpi3_desc: "USMCA 전면 대응 및 관세 0% 실현",
+                kpi4_label: "2030 목표", kpi4_desc: "북미 시장 매출 7.5억 달러 달성",
+                strat_title: "글로벌 3각 거점 체계 (Tri-Axis)",
+                tri1: "첨단 R&D 센터", tri2: "대량 생산 기지", tri3: "북미 시장 최적화",
+                road_title: "향후 주요 로드맵",
+                step1: "몽클로바 허브 인프라 완공 및 셋업",
+                step2: "주요 OEM향 양산 개시 (SOP)",
+                step3: "북미 매출 7.5억 달러 달성 및 시장 선도"
+            },
+            es: {
+                badge: "Visión Global 2030",
+                title: "Beyond Mobile, <br><span class='gradient-text italic'>Into Mobility</span>",
+                subtitle: "Doosung Tech: El Futuro de la Movilidad Eléctrica en Monclova, México",
+                kpi1_label: "Logística", kpi1_desc: "Reducción en costos de transporte hacia Texas Gigafactory",
+                kpi2_label: "Tiempo de Entrega", kpi2_desc: "Distancia estratégica desde la frontera de EE. UU.",
+                kpi3_label: "Beneficio Fiscal", kpi3_desc: "Cumplimiento total con el acuerdo USMCA",
+                kpi4_label: "Meta 2030", kpi4_desc: "Ventas proyectadas en el mercado de Norteamérica",
+                strat_title: "Sistema Global Triaxial",
+                tri1: "I+D de Vanguardia", tri2: "Producción en Masa", tri3: "Optimización NA",
+                road_title: "Próximos Pasos",
+                step1: "Finalización de infraestructura en Monclova Hub.",
+                step2: "Inicio de Producción (SOP) para clientes OEM.",
+                step3: "Dominio del mercado NA con ingresos de $750M."
+            },
+            en: {
+                badge: "Global Vision 2030",
+                title: "Beyond Mobile, <br><span class='gradient-text italic'>Into Mobility</span>",
+                subtitle: "Doosung Tech: The Future of EV Mobility in Monclova, Mexico",
+                kpi1_label: "Logistics", kpi1_desc: "35% Reduction in transport costs to Texas Gigafactory",
+                kpi2_label: "Lead Time", kpi2_desc: "Strategic 3-hour distance from the US border",
+                kpi3_label: "Tax Benefits", kpi3_desc: "Full compliance with USMCA (0% Tariff)",
+                kpi4_label: "2030 Goal", kpi4_desc: "$750M projected revenue in NA market",
+                strat_title: "Tri-Axis Global System",
+                tri1: "Advanced R&D", tri2: "Mass Production", tri3: "NA Optimization",
+                road_title: "Future Roadmap",
+                step1: "Infrastructure completion at Monclova Hub.",
+                step2: "Start of Production (SOP) for OEM clients.",
+                step3: "NA market dominance with $750M revenue."
+            }
+        };
+
+        function updateLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${lang}`).classList.add('active');
+
+            const t = translations[lang];
+            document.getElementById('badge').innerText = t.badge;
+            document.getElementById('main-title').innerHTML = t.title;
+            document.getElementById('sub-title').innerText = t.subtitle;
+            document.getElementById('label-kpi1').innerText = t.kpi1_label;
+            document.getElementById('desc-kpi1').innerText = t.kpi1_desc;
+            document.getElementById('label-kpi2').innerText = t.kpi2_label;
+            document.getElementById('desc-kpi2').innerText = t.kpi2_desc;
+            document.getElementById('label-kpi3').innerText = t.kpi3_label;
+            document.getElementById('desc-kpi3').innerText = t.kpi3_desc;
+            document.getElementById('label-kpi4').innerText = t.label_kpi4; // Fixed key
+            document.getElementById('label-kpi4').innerText = t.kpi4_label;
+            document.getElementById('desc-kpi4').innerText = t.kpi4_desc;
+            document.getElementById('strategy-title').innerText = t.strat_title;
+            document.getElementById('tri-1').innerText = t.tri1;
+            document.getElementById('tri-2').innerText = t.tri2;
+            document.getElementById('tri-3').innerText = t.tri3;
+            document.getElementById('roadmap-title').innerText = t.road_title;
+            document.getElementById('step-1').innerText = t.step1;
+            document.getElementById('step-2').innerText = t.step2;
+            document.getElementById('step-3').innerText = t.step3;
+        }
+
+        // Initialize in Spanish as per user context
+        window.onload = () => updateLang('es');
+    </script>
+</body>
+</html>

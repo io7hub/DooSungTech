@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Narración para la Presentación - Versión Detallada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .script-card {
+            background: white;
+            border-left: 6px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .script-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-active {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .lang-inactive {
+            background-color: #f1f5f9;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+
+        .visual-cue {
+            background-color: #eff6ff;
+            border: 1px dashed #3b82f6;
+            color: #1d4ed8;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .important-note {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Control de Idioma Superior -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 tracking-tight" id="main-title">Guión de Presentación Avanzado</h1>
+                <p class="text-slate-500" id="sub-title">Guía de presentación detallada para la Visión Global 2030 de Doosung Tech</p>
+            </div>
+            <div class="flex gap-2 p-1 bg-slate-200 rounded-lg shadow-inner">
+                <button onclick="switchLang('kr')" id="nav-kr" class="px-6 py-2 rounded-md font-bold lang-inactive transition-all">KR</button>
+                <button onclick="switchLang('es')" id="nav-es" class="px-6 py-2 rounded-md font-bold lang-active transition-all">ES</button>
+                <button onclick="switchLang('en')" id="nav-en" class="px-6 py-2 rounded-md font-bold lang-inactive transition-all">EN</button>
+            </div>
+        </header>
+
+        <!-- Sección de Guión 1 -->
+        <div class="mb-10 script-card p-8 rounded-2xl shadow-sm">
+            <div class="visual-cue"><i class="fas fa-play-circle mr-2"></i><span data-key="cue-1">Introducción: Encabezado superior de la infografía</span></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center" data-key="title-1">
+                <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3 text-sm">01</span>
+                Antecedentes Estratégicos y Declaración de Visión
+            </h2>
+            <p class="leading-relaxed text-slate-700 whitespace-pre-line text-lg" data-key="script-1">
+                Buenos días. Hoy nos encontramos en un punto de inflexión crucial que determinará los próximos 10 años de Doosung Tech. En el centro de esto se encuentra el Hub Monclova de México. Esto no es solo una planta en el extranjero; es nuestro motor estratégico central para asegurar la 'soberanía de la cadena de suministro' en el mercado norteamericano dentro del ecosistema de movilidad global en rápida evolución.
+                Para hacer realidad nuestra visión "Beyond Mobile, Into Mobility", Monclova irá más allá de la producción local para actuar como un centro tecnológico y convertirse en un Game Changer.
+            </p>
+        </div>
+
+        <!-- Sección de Guión 2 -->
+        <div class="mb-10 script-card p-8 rounded-2xl shadow-sm" style="border-left-color: #06b6d4;">
+            <div class="visual-cue"><i class="fas fa-chart-line mr-2"></i><span data-key="cue-2">Sección de Métricas: Panel de 4 indicadores clave</span></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center" data-key="title-2">
+                <span class="w-8 h-8 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center mr-3 text-sm">02</span>
+                Ventaja Competitiva Abrumadora (Excelencia Operativa)
+            </h2>
+            <p class="leading-relaxed text-slate-700 whitespace-pre-line text-lg" data-key="script-2">
+                La competitividad física y económica del Hub Monclova no tiene rival. Primero, la ventaja geográfica. Nuestra ubicación óptima a solo 3 horas de la frontera de EE.UU. y la Gigafábrica de Texas no solo reduce los costos logísticos en un 35%, sino que también permite una respuesta técnica en tiempo real al cerrar la distancia física con los clientes.
+                Segundo, la competitividad arancelaria bajo el USMCA. Al cumplir con las estrictas reglas de origen, disfrutamos de aranceles cero y construimos una cadena de suministro estable libre de riesgos geopolíticos. Esto nos permitirá reducir los plazos de entrega en un 50% y ofrecer un valor superior al Just-In-Time.
+            </p>
+            <div class="important-note" data-key="note-2">
+                <i class="fas fa-exclamation-triangle mr-2"></i> <strong>Punto clave:</strong> Enfatice la innovación en la 'velocidad de respuesta al cliente' más que el simple ahorro de costos.
+            </div>
+        </div>
+
+        <!-- Sección de Guión 3 -->
+        <div class="mb-10 script-card p-8 rounded-2xl shadow-sm" style="border-left-color: #10b981;">
+            <div class="visual-cue"><i class="fas fa-network-wired mr-2"></i><span data-key="cue-3">Sección de Red: Red de Producción Global Triaxial</span></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center" data-key="title-3">
+                <span class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 text-sm">03</span>
+                Sinergia de Red Global Triaxial
+            </h2>
+            <p class="leading-relaxed text-slate-700 whitespace-pre-line text-lg" data-key="script-3">
+                Nuestra estrategia no es el crecimiento de una base única, sino la 'interconexión global'. Completaremos el sistema 'Tri-Axis' integrando las capacidades de I+D de Corea con la eficiencia de producción en masa de Vietnam y la optimización local de México. Esta sinergia consolidará nuestra posición como socio confiable en módulos BMS y electrónicos para clientes OEM como Tesla, Hyundai y las 'Big 3' de EE. UU. Estamos listos para ser compañeros en la innovación de fabricación de movilidad en América del Norte.
+            </p>
+        </div>
+
+        <!-- Sección de Guión 4 -->
+        <div class="mb-10 script-card p-8 rounded-2xl shadow-sm" style="border-left-color: #d4af37;">
+            <div class="visual-cue"><i class="fas fa-flag-checkered mr-2"></i><span data-key="cue-4">Visión Inferior: Gráfico de ingresos de $750M</span></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center" data-key="title-4">
+                <span class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center mr-3 text-sm">04</span>
+                Meta de Ingresos 2030 y Compromiso de Salto
+            </h2>
+            <p class="leading-relaxed text-slate-700 whitespace-pre-line text-lg" data-key="script-4">
+                En conclusión, hemos fijado una meta audaz de 750 millones de dólares en ventas para el mercado de NA en 2030. Esto representa un crecimiento explosivo de más del 350%, impulsando la reestructuración de Doosung Tech hacia el sector automotriz. Siguiendo nuestra hoja de ruta, el crecimiento se acelerará tras el Inicio de Producción (SOP) en 2026. La energía de Monclova escribirá una nueva leyenda para nuestra empresa. Solicito su apoyo activo en este viaje hacia la excelencia global. Muchas gracias.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const content = {
+            kr: {
+                "main-title": "고급 발표 스크립트",
+                "sub-title": "두성테크 2030 글로벌 비전 심화 발표 가이드",
+                "cue-1": "도입부: 인포그래픽 상단 헤더 슬라이드",
+                "title-1": "전략적 배경 및 비전 선포",
+                "script-1": "안녕하십니까. 오늘 우리는 두성테크의 미래 10년을 결정지을 중대한 전환점에 서 있습니다. 그 중심에는 멕시코 몽클로바 허브가 있습니다. 이곳은 단순한 해외 공장이 아닙니다. 급변하는 글로벌 모빌리티 생태계에서 북미 시장의 '공급망 주권'을 확보하기 위한 우리의 전략적 핵심 엔진입니다.\n우리의 비전 \"Beyond Mobile, Into Mobility\"를 실현하기 위해, 몽클로바는 전장 부품의 현지화 생산을 넘어 기술 허브로서의 역할을 수행하며 게임 체인저가 될 것입니다.",
+                "cue-2": "지표 섹션: 4가지 핵심 지표 대시보드",
+                "title-2": "압도적인 경쟁 우위 (Operational Excellence)",
+                "script-2": "몽클로바 허브가 갖는 물리적, 경제적 경쟁력은 타의 추종을 불허합니다. 첫째, 지리적 이점입니다. 미국 국경 및 텍사스 기가팩토리와 3시간 거리라는 최적의 입지는 물류비를 35% 절감할 뿐만 아니라, 고객사와의 물리적 거리를 좁혀 실시간 기술 대응을 가능케 합니다.\n둘째, USMCA 체제 하에서의 관세 경쟁력입니다. 강화된 원산지 규정을 충족함으로써 무관세 혜택을 누리는 동시에, 지정학적 리스크로부터 자유로운 안정적인 공급망을 구축하게 됩니다. 이를 통해 우리는 리드 타임을 50% 단축하고, 고객사에게 Just-In-Time 이상의 가치를 제공할 것입니다.",
+                "note-2": "<strong>포인트:</strong> 단순 비용 절감이 아닌 '고객사 대응 속도'의 혁신을 강조하십시오.",
+                "cue-3": "네트워크 섹션: 글로벌 3각 생산 체계도",
+                "title-3": "글로벌 시너지와 네트워크",
+                "script-3": "우리의 전략은 단일 거점의 성장이 아닌 '글로벌 연계'에 있습니다. 한국의 최첨단 R&D 센터에서 설계된 기술 역량과 베트남의 대량 생산 효율성을 멕시코 허브의 현지 최적화 역량과 결합하는 'Tri-Axis' 체계를 완성할 것입니다. 이러한 네트워크 시너지는 테슬라, 현대차, 그리고 미국 'Big 3' OEM 업체들에게 신뢰할 수 있는 BMS 및 전장 모듈 파트너로서의 지위를 공고히 해줄 것입니다. 우리는 단순 부품 공급업체를 넘어, 북미 모빌리티 제조 혁신의 동반자가 될 준비가 되었습니다.",
+                "cue-4": "하단 비전: 매출 및 로드맵 섹션",
+                "title-4": "2030 매출 목표와 도약의 다짐",
+                "script-4": "결론적으로, 우리는 2030년까지 북미 시장 매출 7억 5천만 달러라는 담대한 목표를 세웠습니다. 이는 현재 대비 350% 이상의 폭발적인 성장이며, 그룹 전체 매출의 성장을 견인할 것입니다. 오늘 말씀드린 로드맵에 따라 2026년 양산 개시(SOP)를 기점으로 우리의 성장은 가속화될 것입니다. 몽클로바에서 뿜어져 나올 에너지가 두성테크의 새로운 전설을 쓸 것입니다. 글로벌 일류 기업으로 가는 이 여정에 여러분의 적극적인 동참과 지지를 부탁드립니다. 감사합니다."
+            },
+            es: {
+                "main-title": "Guión de Presentación Avanzado",
+                "sub-title": "Guía de presentación detallada para la Visión Global 2030 de Doosung Tech",
+                "cue-1": "Introducción: Encabezado superior de la infografía",
+                "title-1": "Antecedentes Estratégicos y Declaración de Visión",
+                "script-1": "Buenos días. Hoy nos encontramos en un punto de inflexión crucial que determinará los próximos 10 años de Doosung Tech. En el centro de esto se encuentra el Hub Monclova de México. Esto no es solo una planta en el extranjero; es nuestro motor estratégico central para asegurar la 'soberanía de la cadena de suministro' en el mercado norteamericano dentro del ecosistema de movilidad global en rápida evolución.\nPara hacer realidad nuestra visión \"Beyond Mobile, Into Mobility\", Monclova irá más allá de la producción local para actuar como un centro tecnológico y convertirse en un Game Changer.",
+                "cue-2": "Sección de Métricas: Panel de 4 indicadores clave",
+                "title-2": "Ventaja Competitiva Abrumadora (Excelencia Operativa)",
+                "script-2": "La competitividad física y económica del Hub Monclova no tiene rival. Primero, la ventaja geográfica. Nuestra ubicación óptima a solo 3 horas de la frontera de EE.UU. y la Gigafábrica de Texas no solo reduce los costos logísticos en un 35%, sino que también permite una respuesta técnica en tiempo real al cerrar la distancia física con los clientes.\nSegundo, la competitividad arancelaria bajo el USMCA. Al cumplir con las estrictas reglas de origen, disfrutamos de aranceles cero y construimos una cadena de suministro estable libre de riesgos geopolíticos. Esto nos permitirá reducir los plazos de entrega en un 50% y ofrecer un valor superior al Just-In-Time.",
+                "note-2": "<strong>Punto clave:</strong> Enfatice la innovación en la 'velocidad de respuesta al cliente' más que el simple ahorro de costos.",
+                "cue-3": "Sección de Red: Red de Producción Global Triaxial",
+                "title-3": "Sinergia de Red Global Triaxial",
+                "script-3": "Nuestra estrategia no es el crecimiento de una base única, sino la 'interconexión global'. Completaremos el sistema 'Tri-Axis' integrando las capacidades de I+D de Corea con la eficiencia de producción en masa de Vietnam y la optimización local de México. Esta sinergia consolidará nuestra posición como socio confiable en módulos BMS y electrónicos para clientes OEM como Tesla, Hyundai y las 'Big 3' de EE. UU. Estamos listos para ser compañeros en la innovación de fabricación de movilidad en América del Norte.",
+                "cue-4": "Visión Inferior: Gráfico de ingresos de $750M",
+                "title-4": "Meta de Ingresos 2030 y Compromiso de Salto",
+                "script-4": "En conclusión, hemos fijado una meta audaz de 750 millones de dólares en ventas para el mercado de NA en 2030. Esto representa un crecimiento explosivo de más del 350%, impulsando la reestructuración de Doosung Tech hacia el sector automotriz. Siguiendo nuestra hoja de ruta, el crecimiento se acelerará tras el Inicio de Producción (SOP) en 2026. La energía de Monclova escribirá una nueva leyenda para nuestra empresa. Solicito su apoyo activo en este viaje hacia la excelencia global. Muchas gracias.",
+            },
+            en: {
+                "main-title": "Advanced Presentation Script",
+                "sub-title": "Advanced Guide for Doosung Tech's 2030 Global Vision",
+                "cue-1": "Intro: Top Header Section",
+                "title-1": "Strategic Background & Vision Proclamation",
+                "script-1": "Good morning. Today, we stand at a crucial turning point that will define the next decade of Doosung Tech. At the heart of this transformation is the Mexico Monclova Hub. This is not merely an offshore factory; it is our strategic core engine designed to secure 'supply chain sovereignty' in the North American market amidst the rapidly evolving global mobility ecosystem.\nTo realize our vision, \"Beyond Mobile, Into Mobility,\" Monclova will transcend local production to serve as a technology hub, becoming a true industry game changer.",
+                "cue-2": "Metrics: 4 Key Indicators Dashboard",
+                "title-2": "Overwhelming Competitive Edge (Operational Excellence)",
+                "script-2": "The physical and economic competitiveness of the Monclova Hub is second to none. First, the geographical advantage. Our optimal location, just 3 hours from the US border and the Texas Gigafactory, not only cuts logistics costs by 35% but also enables real-time technical response by bridging the physical gap with our clients.\nSecond, our tariff competitiveness under the USMCA. By satisfying strict rules of origin, we enjoy zero-tariff benefits while building a stable supply chain free from geopolitical risks. This will allow us to reduce lead times by 50% and deliver value beyond just-in-time delivery.",
+                "note-2": "<strong>Key Point:</strong> Emphasize innovation in 'customer response speed' rather than just cost reduction.",
+                "cue-3": "Network: Tri-Axis Global Production Network",
+                "title-3": "Global Synergy & Network Strategy",
+                "script-3": "Our strategy lies in 'global connectivity' rather than isolated growth. We will finalize the 'Tri-Axis' system by integrating high-tech R&D from Korea, mass production efficiency from Vietnam, and local optimization from Mexico. This network synergy will solidify our status as a trusted BMS and electronics module partner for major OEMs like Tesla, Hyundai, and the US 'Big 3'. We are ready to be a partner in North American mobility manufacturing innovation.",
+                "cue-4": "Vision: $750M Revenue Target",
+                "title-4": "2030 Revenue Goals & Commitment to Leap",
+                "script-4": "In conclusion, we have set a bold target of $750 million in North American revenue by 2030. This represents an explosive growth of over 350% and will be the key driver for Doosung Tech's growth. According to our roadmap, our growth will accelerate following the Start of Production (SOP) in 2026. The energy generated from Monclova will write a new legend for Doosung Tech. I ask for your active participation and support on this journey to becoming a world-class leader. Thank you.",
+            }
+        };
+
+        function switchLang(lang) {
+            document.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('lang-active');
+                btn.classList.add('lang-inactive');
+            });
+            document.getElementById(`nav-${lang}`).classList.add('lang-active');
+            document.getElementById(`nav-${lang}`).classList.remove('lang-inactive');
+
+            document.getElementById('main-title').innerText = content[lang]["main-title"];
+            document.getElementById('sub-title').innerText = content[lang]["sub-title"];
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (content[lang][key]) {
+                    if (key.startsWith('note')) {
+                        el.innerHTML = content[lang][key];
+                    } else {
+                        el.innerText = content[lang][key];
+                    }
+                }
+            });
+        }
+
+        window.onload = () => {
+            switchLang('es');
+        };
+    </script>
+</body>
+</html>
